@@ -1,0 +1,26 @@
+[package]
+name = "minimal-logging"
+version = "0.1.0"
+authors = ["RosieTheGhostie"]
+edition = "2021"
+
+[lib]
+crate-type = ["lib"]
+path = "src/lib.rs"
+
+[dependencies]
+
+[dependencies.minimal-logging-attributes]
+version = "0.1.0"
+path = "minimal-logging-attributes"
+
+[dependencies.minimal-logging-macros]
+version = "0.1.0"
+path = "minimal-logging-macros"
+
+[features]
+default = ["macros"]
+full = ["attributes", "macros"]
+
+attributes = []
+macros = []
