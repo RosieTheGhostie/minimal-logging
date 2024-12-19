@@ -1,5 +1,8 @@
 #[macro_export]
 macro_rules! set_color {
+    (gray) => {
+        eprint!("\x1B[38;5;248m");
+    };
     (debug) => {
         eprint!("\x1B[35m");
     };
@@ -19,6 +22,18 @@ macro_rules! reset_color {
     () => {
         eprint!("\x1B[0m");
     };
+}
+
+#[macro_export]
+macro_rules! grayln {
+    () => {
+        eprintln!()
+    };
+    ($($arg:tt)*) => {{
+        eprint!("\x1B[38;5;248m");
+        eprintln!($($arg)*);
+        eprint!("\x1B[0m");
+    }};
 }
 
 #[macro_export]
