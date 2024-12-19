@@ -18,5 +18,5 @@ version = "2.0"
 features = ["full", "extra-traits"]
 
 [dependencies.minimal-logging-macros]
-version = "0.2.0"
+version = "0.3.0"
 path = "../minimal-logging-macros"
